@@ -6,9 +6,11 @@ const Layout = () => {
   return (
     <>
       <NavBar />
-        <div className="bg-blue-100 h-screen">
+      <div className="h-screen w-full flex justify-center">
+        <div className="bg-blue-100 h-full container">
           <Outlet />
         </div>
+      </div>
       <Footer />
     </>
   )
