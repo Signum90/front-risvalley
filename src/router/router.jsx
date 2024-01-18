@@ -20,6 +20,13 @@ import { uploadChallengers } from "../pages/innovation/upload"
 import { uploadLibrary } from "../pages/library/upload"
 import { uploadTeam } from "../pages/we/uploadTeam"
 
+/* ---------------- route-autentication ---------------- */
+const estateAuth = ['authenticated', 'no-authenticated']
+const localState = localStorage.getItem('stateLog')
+const state = estateAuth.includes(localState)
+// TODO: mirar si puedo guardar en el contexto global sin que se limpie
+console.log(state);
+
 /* ---------------- Router ---------------- */
 export const router = createBrowserRouter([
   {
