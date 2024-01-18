@@ -21,11 +21,15 @@ import { uploadLibrary } from "../pages/library/upload"
 import { uploadTeam } from "../pages/we/uploadTeam"
 
 /* ---------------- route-autentication ---------------- */
-const estateAuth = ['authenticated', 'no-authenticated']
-const localState = localStorage.getItem('stateLog')
-const state = estateAuth.includes(localState)
-// TODO: mirar si puedo guardar en el contexto global sin que se limpie
-console.log(state);
+const ValidateRoute = ({ children }) => {
+
+  const localState = localStorage.getItem('stateLog')
+  const state = localState === 'authenticated'
+  // TODO: mirar si puedo guardar en el contexto global sin que se limpie -- validar token tambien -- validar permisos
+
+  return (state ? children : window.location.href ='/' )
+
+}
 
 /* ---------------- Router ---------------- */
 export const router = createBrowserRouter([
@@ -67,11 +71,18 @@ export const router = createBrowserRouter([
         element: <Courses />,
       },
       {
-        path: "dashboard",
-        element: <Dashboard />,
+        path: "/dashboard",
         children: [
           {
+            index: true,
+            element: <ValidateRoute> <Dashboard /> </ValidateRoute>,
+          },
+          {
             path: "addEntity",
+            element: <AddEntity />,
+          },
+          {
+            path: "addEvents",
             element: <AddEntity />,
           }
         ]
