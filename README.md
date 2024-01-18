@@ -1,8 +1,23 @@
-# React + Vite
+# RisPark &middot; [![Node.js version](https://img.shields.io/badge/node-16.19.0-green.svg)](https://nodejs.org/download/release/v16.19.0/) [![Vite version](https://img.shields.io/badge/vite-5.0.8-blue.svg)](https://www.npmjs.com/package/vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rispark es ..............
 
-Currently, two official plugins are available:
+* **Indice:** Texto  
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Clona el repositorio en tu equipo
+  
+  ```git
+   git clone https://github.com/Signum90/front-risvalley.git
+  ```
+* Instala las dependencias
+  
+  ```bash
+   npm install -E
+  ```
+
+* Inicia el servidor
+
+  ```bash
+   npm run dev
+  ```
