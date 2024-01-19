@@ -13,7 +13,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="h-full w-screen">
       App data : {actors}
       <div className="w-full"></div>
       <button onClick={logIn} className="bg-red-200">log in</button>

@@ -7,7 +7,7 @@ const Layout = () => {
     <>
       <NavBar />
       <div className="h-screen w-full flex justify-center">
-        <div className="bg-blue-100 h-full container">
+        <div className="bg-blue-100">
           <Outlet />
         </div>
       </div>
