@@ -1,8 +1,8 @@
+
 /* ---------------- react-router ---------------- */
 import { createBrowserRouter } from "react-router-dom"
 
 /* ---------------- Pages ---------------- */
-import NotFound from "../pages/404/NotFound"
 import App from "../App"
 import Library from "../pages/library/Library"
 import Innovation from "../pages/innovation/Innovation"
@@ -10,83 +10,76 @@ import Service from "../pages/service/service"
 import We from "../pages/we/we"
 import Courses from "../pages/courses/Courses"
 import Directory from "../pages/directory/Directory"
-import Dashboard from "../pages/dashboard/Dashboard"
-import AddEntity from "../pages/adEntitys/AddEntity"
 import Layout from "../components/Layout"
+import NotFound from "../pages/404/NotFound"
+
+import Dashboard from "../pages/dashboard/Dashboard"
+import ControlEntity from "../pages/dashboard/controlEntitys/ControlEntity"
 
 /* ---------------- load-data ---------------- */
-import { uploadActors } from "../upload"
 import { uploadChallengers } from "../pages/innovation/upload"
 import { uploadLibrary } from "../pages/library/upload"
 import { uploadTeam } from "../pages/we/uploadTeam"
 
-/* ---------------- route-autentication ---------------- */
-const ValidateRoute = ({ children }) => {
+/* ---------------- Routes ---------------- */
+import { PrivateRoutes, PublicRoutes } from "./routes"
 
-  const localState = localStorage.getItem('stateLog')
-  const state = localState === 'authenticated'
-  // TODO: mirar si puedo guardar en el contexto global sin que se limpie -- validar token tambien -- validar permisos
-
-  return (state ? children : window.location.href ='/' )
-
-}
+/* ---------------- Guard Autentication ---------------- */
+import AuthGuard from "../guards/auth.guard"
 
 /* ---------------- Router ---------------- */
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: PublicRoutes.HOME,
     element: <Layout/>,
     errorElement: <NotFound/>,
     children: [
       {
         index: true,
         element: <App />,
-        loader: uploadActors
       },
       {
-        path: "library",
+        path: PublicRoutes.LIBRARY,
         element: <Library />,
-        loader: uploadLibrary
+        loader: uploadLibrary,
       },
       {
-        path: "innovation",
+        path: PublicRoutes.INNOVATION,
         element: <Innovation />,
         loader: uploadChallengers
       },
       {
-        path: "service",
+        path: PublicRoutes.SERVICE,
         element: <Service />,
       },
       {
-        path: "we",
+        path: PublicRoutes.NOSOTROS,
         element: <We />,
         loader: uploadTeam
       },
       {
-        path: "directory",
+        path: PublicRoutes.DIRECTORY,
         element: <Directory />,
       },
       {
-        path: "courses",
+        path: PublicRoutes.COURSES,
         element: <Courses />,
-      },
-      {
-        path: "/dashboard",
-        children: [
-          {
-            index: true,
-            element: <ValidateRoute> <Dashboard /> </ValidateRoute>,
-          },
-          {
-            path: "addEntity",
-            element: <AddEntity />,
-          },
-          {
-            path: "addEvents",
-            element: <AddEntity />,
-          }
-        ]
       },
     ],
   },
+  {
+    path: PrivateRoutes.DASHBOARD,
+    element: <AuthGuard />,
+    errorElement: <NotFound/>,
+    children: [
+      {
+        index: true,
+        element: <Dashboard />,
+      },
+      {
+        path: PrivateRoutes.DASH_ENTITY,
+        element: <ControlEntity />,
+      },
+    ]
+  }
 ])

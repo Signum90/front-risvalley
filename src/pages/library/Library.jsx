@@ -2,10 +2,10 @@ import { useLoaderData } from "react-router-dom"
 
 const Library = () => {
 
-  const { library } = useLoaderData()
+  const library = useLoaderData()
 
   return (
-    <div>Library : {library}</div>
+    <div className="text-black">Library : {library}</div>
   )
 }
 

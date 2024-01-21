@@ -1,7 +1,11 @@
+
+
 const Dashboard = () => {
 
   return (
-    <div>Dashboard</div>
+    <div className="bg-red-400">
+      <p>dashboard</p>
+    </div>
   )
 }
 

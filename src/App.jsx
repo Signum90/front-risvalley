@@ -1,6 +1,6 @@
 // import { useLoaderData } from "react-router-dom"
 
-function App() {
+function App () {
 
   // const { actors } = useLoaderData()
 
