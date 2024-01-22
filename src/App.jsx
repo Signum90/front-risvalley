@@ -1,18 +1,30 @@
 import Footer from "./components/Footer"
 import { useLoaderData } from "react-router-dom"
+import { useState } from "react";
 
 function App () {
 
   const { actors } = useLoaderData()
   console.log(actors);
 
+
+  const [items, setItems] = useState([
+    { id: 1, content: 'Innovative' },
+    { id: 2, content: 'Empowering' },
+    { id: 3, content: 'Revolutionizing' },
+  ])
+
+  // https://winframedemo.online/wp-content/uploads/2024/01/vr-technology-close-up-animation-of-a-portrait-of-2023-11-27-05-34-23-utc-1.mp4
+
   return (
-    <div className="h-full w-screen">
+    <div className="h-full w-screen overflow-x-hidden">
       {/*  hero image */}
-      <section className="mx-auto h-full flex flex-col justify-center items-center font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
-        <h2 className="text-center">Welcome to</h2>
-        <h2 className="text-center">prisma <span className="text-[#fbbb4c]">your key</span></h2>
-        <h3 className="text-center">to innovation</h3>
+      <section className="mx-auto h-full flex flex-col justify-center items-center">
+        <div className="font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
+          <h2 className="text-center">Welcome to</h2>
+          <h2 className="text-center">prisma <span className="text-[#fbbb4c]">your key</span></h2>
+          <h3 className="text-center">to innovation</h3>
+        </div>
       </section>
       {/* info risvalley */}
       <section className="w-full flex justify-center px-8 py-12">
@@ -121,13 +133,25 @@ function App () {
         </div>
       </section>
       {/* carrousel text */}
-      <section className="border w-full flex justify-center px-8 py-12">
-        carrousel
+      <section className="h-fit w-full overflow-x-auto" >
+        <div className="flex gap-24 justify-start text-[200px]" >
+          {items.map((item) => (
+            <div key={item.id} className="flex flex-nowrap gap-[100px]">
+              <h3>{item.content}</h3>
+              <p>.</p>
+            </div>
+          ))}
+        </div>
       </section>
       {/* mas estadisticas */}
       <section className="border w-full flex justify-center px-8 py-12">
-        estadisticas y video
+        {/* contenedor responsibe */}
+        <div className="max-w-[1300px] container grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="bg-red-300">1</div>
+          <div className="bg-red-300">2</div>
+        </div>
       </section>
+      {/* footer */}
       <Footer />
     </div>
   )
