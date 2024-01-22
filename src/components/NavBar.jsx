@@ -1,3 +1,5 @@
+import { FaAlignRight, FaUserAstronaut as LoginUser, FaUserPlus as AddUser, FaRocket as Rocket } from "react-icons/fa6";
+
 export const NavBar = () => {
   return (
     <div className="w-full absolute flex justify-center h-[150px] opacity-65 bg-black text-white">
@@ -6,7 +8,7 @@ export const NavBar = () => {
         {/* contenedor de asistencia */}
         <div className="w-full h-[85px] flex items-center px-6">
 
-          {/* estructura en y laptop pc */}
+          {/* estructura en laptop - pc */}
           <div className="w-full hidden justify-between xl:flex">
             {/* logo */}
             <div className="w-[150px] my-auto h-full flex items-center justify-center">
@@ -22,9 +24,9 @@ export const NavBar = () => {
             </div>
             {/* iconos */}
             <div className="flex gap-4 items-center">
-              <div className="border-2 border-white w-12 h-12 rounded-full"></div>
-              <div className="border-2 border-white w-12 h-12 rounded-full"></div>
-              <div className="border-2 border-white w-12 h-12 rounded-full"></div>
+              <LoginUser className="border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
+              <AddUser className="border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
+              <Rocket className="border-[2px]  border-white min-w-10 min-h-10 rounded-full p-2" />
             </div>
           </div>
 
@@ -35,8 +37,8 @@ export const NavBar = () => {
               <img src="https://risvalley.b-cdn.net/wp-content/uploads/2020/09/RISVALLY-LOGO-200-148.png" alt="logo risvalley" />
             </div>
             {/* icono */}
-            <div className="flex gap-4 items-center">
-              <div className="border-2 border-white w-12 h-12 rounded-full"></div>
+            <div className="flex items-center">
+              <FaAlignRight className="w-8 h-8" />
             </div>
           </div>
 

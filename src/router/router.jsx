@@ -20,6 +20,7 @@ import ControlEntity from "../pages/dashboard/controlEntitys/ControlEntity"
 import { uploadChallengers } from "../pages/innovation/upload"
 import { uploadLibrary } from "../pages/library/upload"
 import { uploadTeam } from "../pages/we/uploadTeam"
+import { uploadActors } from "../upload"
 
 /* ---------------- Routes ---------------- */
 import { PrivateRoutes, PublicRoutes } from "./routes"
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <App />,
+        loader: uploadActors,
       },
       {
         path: PublicRoutes.LIBRARY,
