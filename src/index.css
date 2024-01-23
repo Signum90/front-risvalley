@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --verde: #9EC864;
+  --amarillo: #FBBB4C;
+  --rojo: #EB5D60;
+  --azul: #4DAAE4;
+}
+
+.bg-verde {
+  background-color: var(--verde);
+}
+
+.bg-amarillo {
+  background-color: var(--amarillo);
+}
+
+.bg-rojo {
+  background-color: var(--rojo);
+}
+
+.bg-azul {
+  background-color: var(--azul);
+}
+
+.txt-verde {
+  color: var(--verde);
+}
+
+.txt-amarillo {
+  color: var(--amarillo);
+}
+
+.txt-rojo {
+  color: var(--rojo);
+}
+
+.txt-azul {
+  color: var(--azul);
+}
+
+
 html {
   scroll-behavior: smooth;
 }

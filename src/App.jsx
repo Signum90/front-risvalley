@@ -1,6 +1,7 @@
 import Footer from "./components/Footer"
 import { useLoaderData } from "react-router-dom"
 import { useState } from "react";
+import { FaCaretRight } from "react-icons/fa6";
 
 function App () {
 
@@ -14,15 +15,13 @@ function App () {
     { id: 3, content: 'Revolutionizing' },
   ])
 
-  // https://winframedemo.online/wp-content/uploads/2024/01/vr-technology-close-up-animation-of-a-portrait-of-2023-11-27-05-34-23-utc-1.mp4
-
   return (
     <div className="h-full w-screen overflow-x-hidden">
       {/*  hero image */}
       <section className="mx-auto h-full flex flex-col justify-center items-center">
         <div className="font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
           <h2 className="text-center">Welcome to</h2>
-          <h2 className="text-center">prisma <span className="text-[#fbbb4c]">your key</span></h2>
+          <h2 className="text-center">prisma <span className="txt-amarillo">your key</span></h2>
           <h3 className="text-center">to innovation</h3>
         </div>
       </section>
@@ -31,7 +30,7 @@ function App () {
         {/* contenedor responsibe */}
         <div className="max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
           {/* subitle */}
-          <h1 className="text-3xl font-medium md:text-5xl text-[#9EC864]">Risvalley</h1>
+          <h1 className="text-3xl font-medium md:text-5xl txt-verde">Risvalley</h1>
           {/* contenedor asistencia */}
           <div className="w-full flex gap-4 flex-col md:flex-row lg:w-[700px] xl:w-[800px] lg:justify-between">
             {/* infor subitulo */}
@@ -87,7 +86,7 @@ function App () {
         <div className="max-w-[1000px] container flex flex-col items-center gap-8">
           {/* frase */}
           <h3 className="w-full xl:w-[850px] text-3xl lg:text-5xl font-medium text-center">
-            Transform your business with AI startup: <span className="text-[#9EC864]"> opportunities and innovations </span> that will change the game
+            Transform your business with AI startup: <span className="txt-verde"> opportunities and innovations </span> that will change the game
           </h3>
           {/* autor frase */}
           <div className="flex flex-col text-center text-lg">
@@ -112,22 +111,22 @@ function App () {
             {/* Projects */}
             <div className="relative text-center h-[160px] flex items-center justify-center">
               <p className="text-[160px] font-bold text-gray-900">98</p>
-              <h4 className="absolute top-[45%] text-[#9EC864] font-bold text-2xl">Projects</h4>
+              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">Projects</h4>
             </div>
             {/* People */}
             <div className="relative text-center h-[160px] flex items-center justify-center">
               <p className="text-[160px] font-bold text-gray-900">65</p>
-              <h4 className="absolute top-[45%] text-[#9EC864] font-bold text-2xl">People</h4>
+              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">People</h4>
             </div>
             {/* Universitys */}
             <div className="relative text-center h-[160px] flex items-center justify-center">
               <p className="text-[160px] font-bold text-gray-900">10</p>
-              <h4 className="absolute top-[45%] text-[#9EC864] font-bold text-2xl">Universitys</h4>
+              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">Universitys</h4>
             </div>
             {/* Dreams */}
             <div className="relative text-center h-[160px] flex items-center justify-center">
               <p className="text-[160px] font-bold text-gray-900">15</p>
-              <h4 className="absolute top-[45%] text-[#9EC864] font-bold text-2xl">Dreams</h4>
+              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">Dreams</h4>
             </div>
           </div>
         </div>
@@ -144,10 +143,22 @@ function App () {
         </div>
       </section>
       {/* mas estadisticas */}
-      <section className="border w-full flex justify-center px-8 py-12">
+      <section className="w-full flex justify-center px-8 py-12">
         {/* contenedor responsibe */}
-        <div className="max-w-[1300px] container grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="bg-red-300">1</div>
+        <div className="max-w-[1300px] container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+          {/* We develop & create digital future */}
+          <div>
+            <h3 className="w-[90%] txt-amarillo pb-2 font-semibold text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">We develop & create digital future</h3>
+            <p className="text-gray-500 pb-4">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+            <div className="flex flex-nowrap items-center gap-4">
+              {/* play video - modal */}
+              <button className="p-4 bg-gray-900 rounded-full text-xl">
+                <FaCaretRight />
+              </button>
+              <p className="font-semibold text-lg">Video Presentación</p>
+            </div>
+          </div>
+          {/* estadisticas actores */}
           <div className="bg-red-300">2</div>
         </div>
       </section>
