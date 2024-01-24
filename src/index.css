@@ -41,6 +41,10 @@
   color: var(--azul);
 }
 
+.bg-gradient-radial {
+  background: radial-gradient(black, transparent);
+}
+
 
 html {
   scroll-behavior: smooth;

@@ -1,12 +1,14 @@
 import { FaAlignRight, FaUserAstronaut as LoginUser, FaUserPlus as AddUser, FaRocket as Rocket } from "react-icons/fa6";
+import ReactModal from "react-modal"
 
 export const NavBar = () => {
-  //TODO: detectar posicion del scroll para ocultar la nav
-  // https://www.bufa.es/javascript-detectar-direccion-arriba-abajo-al-hacer-scroll/
-  // console.log(document.body.getBoundingClientRect().top)
+
+  function LoginUserControl() {
+    console.log('buenas');
+  }
 
   return (
-    <div className="w-full fixed top-0 flex justify-center h-[130px] opacity-65 bg-black text-white">
+    <div className="w-full absolute top-0 flex justify-center h-[130px] opacity-65 bg-black text-white">
       {/* navbar - container responsibe*/}
       <nav className="container my-auto">
         {/* contenedor de asistencia */}
@@ -28,9 +30,9 @@ export const NavBar = () => {
             </div>
             {/* iconos */}
             <div className="flex gap-4 items-center">
-              <LoginUser className="border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
-              <AddUser className="border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
-              <Rocket className="border-[2px]  border-white min-w-10 min-h-10 rounded-full p-2" />
+              <LoginUser onClick={LoginUserControl} className="cursor-pointer border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
+              <AddUser className="cursor-pointer border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
+              <Rocket className="cursor-pointer border-[2px]  border-white min-w-10 min-h-10 rounded-full p-2" />
             </div>
           </div>
 
