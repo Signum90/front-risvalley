@@ -48,9 +48,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-section {
   background-color: black;
 }
 
@@ -71,7 +68,14 @@ section {
   background: black;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 10px;
+/* ===== Section de carrosel de texto - HOME ===== */
+
+/* secction de carrousel - chrome edge Safari */
+#carrousel-section-home::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* secction de carrousel - firefox */
+#carrousel-section-home::-webkit-scrollbar {
+  width: 0px;
 }

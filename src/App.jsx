@@ -1,4 +1,3 @@
-import Footer from "./components/Footer"
 import { useLoaderData } from "react-router-dom"
 import { useState } from "react";
 import { FaCaretRight } from "react-icons/fa6";
@@ -16,9 +15,9 @@ function App () {
   ])
 
   return (
-    <div className="h-full w-screen overflow-x-hidden">
+    <div className="h-full w-full overflow-x-hidden">
       {/*  hero image */}
-      <section className="mx-auto h-full flex flex-col justify-center items-center">
+      <section className="w-full h-screen flex flex-col justify-center items-center">
         <div className="font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
           <h2 className="text-center">Welcome to</h2>
           <h2 className="text-center">prisma <span className="txt-amarillo">your key</span></h2>
@@ -26,7 +25,7 @@ function App () {
         </div>
       </section>
       {/* info risvalley */}
-      <section className="w-full flex justify-center px-8 py-12">
+      <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
           {/* subitle */}
@@ -45,7 +44,7 @@ function App () {
         </div>
       </section>
       {/* services */}
-      <section className="w-full flex justify-center px-8 py-12">
+      <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
           {/* cards */}
@@ -81,7 +80,7 @@ function App () {
         </div>
       </section>
       {/* frase */}
-      <section className="w-full flex justify-center px-8 py-12">
+      <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="max-w-[1000px] container flex flex-col items-center gap-8">
           {/* frase */}
@@ -96,7 +95,7 @@ function App () {
         </div>
       </section>
       {/* estadisticas de actores */}
-      <section className="w-full flex justify-center px-8 py-12">
+      <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="max-w-[1300px] container flex flex-col items-center gap-7">
           {/* frase */}
@@ -132,7 +131,7 @@ function App () {
         </div>
       </section>
       {/* carrousel text */}
-      <section className="h-fit w-full overflow-x-auto" >
+      <section id="carrousel-section-home" className="h-fit w-full overflow-x-auto my-[120px]">
         <div className="flex gap-24 justify-start text-[200px]" >
           {items.map((item) => (
             <div key={item.id} className="flex flex-nowrap gap-[100px]">
@@ -143,7 +142,7 @@ function App () {
         </div>
       </section>
       {/* mas estadisticas */}
-      <section className="w-full flex justify-center px-8 py-12">
+      <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="max-w-[1300px] container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
           {/* We develop & create digital future */}
@@ -162,8 +161,6 @@ function App () {
           <div className="bg-red-300">2</div>
         </div>
       </section>
-      {/* footer */}
-      <Footer />
     </div>
   )
 }

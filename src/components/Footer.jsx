@@ -2,11 +2,11 @@ import { FaFacebookF as FacebookIcon, FaXTwitter as XTwitterIcon, FaInstagram as
 
 const Footer = () => {
   return (
-    <footer className="w-full flex justify-center px-8 py-12 bg-black text-white">
+    <footer className="w-full flex justify-center px-8 mt-[100px] pb-8 text-white">
       {/* contenedor responsibe */}
       <div className="max-w-[1300px] container flex flex-col gap-8">
         {/* footer superior */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-24 mb-16">
           {/* logo - redes - info */}
           <div className="flex flex-col gap-4">
             {/* logo */}
@@ -36,14 +36,16 @@ const Footer = () => {
             <input className="bg-transparent border-b p-2 outline-none" placeholder="Telefono" type="text" />
             <input className="bg-transparent border-b p-2 outline-none" placeholder="Email" type="email" />
             <textarea className="bg-transparent border-b col-span-2 p-2 outline-none h-[100px]" placeholder="Solicitud" name="" id=""></textarea>
-            <button>Enviar</button>
+            <button className="bg-azul w-[140px] py-2 rounded-[100px]">
+              Enviar
+            </button>
           </form>
         </div>
         {/* separador */}
         <hr className="h-[1px]" />
         {/* footer inferior */}
         <div className="w-full text-center">
-            <h2 className="text-white font-bold">Rispark© <span className="text-gray-600 font-normal">Todos los derechos reservados</span></h2>
+          <h2 className="text-white font-bold">Rispark© <span className="text-gray-600 font-normal">Todos los derechos reservados</span></h2>
         </div>
       </div>
     </footer>
