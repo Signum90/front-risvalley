@@ -1,5 +1,6 @@
 import { FaAlignRight, FaUserAstronaut as LoginUser, FaUserPlus as AddUser, FaRocket as Rocket } from "react-icons/fa6"
 import { showModal } from "./Modal/ModalActions";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
 
@@ -23,11 +24,11 @@ export const NavBar = () => {
             </div>
             {/* navegacion */}
             <div className="w-full p-8 flex justify-center text-lg font-semibold gap-6">
-              <div>Inicio</div>
-              <div>Ecosistema de innovacion</div>
-              <div>Servicios</div>
-              <div>Nosotros</div>
-              <div>Contacto</div>
+              <Link>Inicio</Link>
+              <a href="#home-message">Ecosistema de innovacion</a>
+              <Link>Servicios</Link>
+              <Link>Nosotros</Link>
+              <Link>Contacto</Link>
             </div>
             {/* iconos */}
             <div className="flex gap-4 items-center">

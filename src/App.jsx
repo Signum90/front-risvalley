@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom"
-import { useState } from "react";
 import { FaCaretRight, FaArrowRight as FlechaDerecha } from "react-icons/fa6";
 
 function App () {
@@ -7,12 +6,11 @@ function App () {
   const { actors } = useLoaderData()
   console.log(actors);
 
-
-  const [items, setItems] = useState([
+  const items = [
     { id: 1, content: 'Innovative' },
     { id: 2, content: 'Empowering' },
     { id: 3, content: 'Revolutionizing' },
-  ])
+  ]
 
   return (
     <div className="h-full w-full overflow-x-hidden">
@@ -83,7 +81,7 @@ function App () {
         </div>
       </section>
       {/* frase */}
-      <section className="w-full flex justify-center px-8 my-[120px]">
+      <section id="home-message" className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col items-center gap-8">
           {/* frase */}
@@ -98,7 +96,7 @@ function App () {
         </div>
       </section>
       {/* estadisticas de actores */}
-      <section className="w-full flex justify-center px-8 my-[120px]">
+      <section id="home-stadistics" className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col items-center gap-7">
           {/* frase */}

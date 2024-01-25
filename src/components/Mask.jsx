@@ -1,13 +1,28 @@
 import { FaFacebookF as FacebookIcon, FaXTwitter as XTwitterIcon, FaInstagram as InstagramIcon, FaLinkedinIn as LinkedinIcon, FaArrowUpLong as ArrowUp } from "react-icons/fa6";
+import { useState } from "react"
 
 const Mask = () => {
+
+  const [ scrollStatePosition, setScrollStatePosition ] = useState(false)
+
+  window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop
+    setScrollStatePosition(scrollPosition)
+  })
+
+  // scrollear arriba
+  const scrollToTop = () => {
+    // Animar el desplazamiento hacia arriba
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <>
       {/* scroll elevator */}
-      <div className="fixed h-[80px] right-8 bottom-10 text-lg flex flex-col items-center gap-6">
+      <button className={`btn-scroling-top fixed h-[80px] right-8 bottom-10 text-lg flex flex-col items-center gap-6 transition-all duration-300 hover:text-[#4DAAE4] ${scrollStatePosition > 20 ? 'visible' : 'invisible'}`} onClick={scrollToTop}>
         <ArrowUp />
         <p className="-rotate-90">Elevar</p>
-      </div>
+      </button>
       {/* redes */}
       <div className="invisible -left-44 bottom-1/2 xl:visible fixed flex gap-8 -rotate-90">
         <p className="flex items-center gap-2">
