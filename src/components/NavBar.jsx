@@ -2,6 +2,8 @@ import { FaAlignRight, FaUserAstronaut as LoginUser, FaUserPlus as AddUser, FaRo
 import { showModal } from "./Modal/ModalActions";
 import { Link } from "react-router-dom";
 
+// TODO: revisar y preguntar en dc porque cuando ago un scroll hacia otra parte de la misma pagina me esta ejecutando otra ves la peticion del load de la ruta
+
 export const NavBar = () => {
 
   function LoginUserControl() {
