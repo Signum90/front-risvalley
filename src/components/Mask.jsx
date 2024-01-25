@@ -3,8 +3,9 @@ import { useState } from "react"
 
 const Mask = () => {
 
-  const [ scrollStatePosition, setScrollStatePosition ] = useState(false)
+  const [ scrollStatePosition, setScrollStatePosition ] = useState(0)
 
+  // cambiar la pocicion del scroll
   window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY || document.documentElement.scrollTop
     setScrollStatePosition(scrollPosition)

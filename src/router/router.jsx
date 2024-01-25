@@ -14,7 +14,7 @@ import Layout from "../components/Layout"
 import NotFound from "../pages/404/NotFound"
 
 import Dashboard from "../pages/dashboard/Dashboard"
-import ControlEntity from "../pages/dashboard/controlEntitys/ControlEntity"
+import ControlEntity from "../pages/dashboard/ControlEntity"
 
 /* ---------------- load-data ---------------- */
 import { uploadChallengers } from "../pages/innovation/upload"
