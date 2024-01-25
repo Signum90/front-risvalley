@@ -1,10 +1,11 @@
-import { FaAlignRight, FaUserAstronaut as LoginUser, FaUserPlus as AddUser, FaRocket as Rocket } from "react-icons/fa6";
-import ReactModal from "react-modal"
+import { FaAlignRight, FaUserAstronaut as LoginUser, FaUserPlus as AddUser, FaRocket as Rocket } from "react-icons/fa6"
+import { showModal } from "./Modal/ModalActions";
 
 export const NavBar = () => {
 
   function LoginUserControl() {
-    console.log('buenas');
+    showModal();
+    // mas funcionalidades
   }
 
   return (
