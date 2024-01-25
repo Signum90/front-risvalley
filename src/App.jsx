@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import { useState } from "react";
-import { FaCaretRight } from "react-icons/fa6";
+import { FaCaretRight, FaArrowRight as FlechaDerecha } from "react-icons/fa6";
 
 function App () {
 
@@ -27,19 +27,22 @@ function App () {
       {/* info risvalley */}
       <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
-        <div className="max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
+        <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
           {/* subitle */}
           <h1 className="text-3xl font-medium md:text-5xl txt-verde">Risvalley</h1>
           {/* contenedor asistencia */}
-          <div className="w-full flex gap-4 flex-col md:flex-row lg:w-[700px] xl:w-[800px] lg:justify-between">
+          <div className="w-full flex gap-4 flex-col md:flex-row lg:w-[700px] xl:w-[800px] 2xl:w-[850px] lg:justify-between">
             {/* infor subitulo */}
-            <p className="lg:w-[500px] xl:w-[550px] text-gray-400">
+            <p className="lg:w-full xl:w-full text-gray-400 text-[17px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac tristique nunc, eget pharetra felis.
               Maecenas sit amet commodo risus, egestas auctor felis. Cras varius eros ac quam imperdiet vehicula.
               Pellentesque id sapien.
             </p>
             {/* llamar accion */}
-            <button className="text-start font-bold min-w-[100px]">View More -- </button>
+            <button className="text-start font-bold max-w-[120px] min-w-[120px] h-[30px] flex items-center gap-2">
+              View More
+              <FlechaDerecha />
+            </button>
           </div>
         </div>
       </section>
@@ -82,7 +85,7 @@ function App () {
       {/* frase */}
       <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
-        <div className="max-w-[1000px] container flex flex-col items-center gap-8">
+        <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col items-center gap-8">
           {/* frase */}
           <h3 className="w-full xl:w-[850px] text-3xl lg:text-5xl font-medium text-center">
             Transform your business with AI startup: <span className="txt-verde"> opportunities and innovations </span> that will change the game
@@ -97,7 +100,7 @@ function App () {
       {/* estadisticas de actores */}
       <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
-        <div className="max-w-[1300px] container flex flex-col items-center gap-7">
+        <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col items-center gap-7">
           {/* frase */}
           <h3 className="w-full text-3xl lg:text-5xl font-medium text-center">
             Estadisticas de Actores
@@ -144,7 +147,7 @@ function App () {
       {/* mas estadisticas */}
       <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
-        <div className="max-w-[1300px] container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
           {/* We develop & create digital future */}
           <div>
             <h3 className="w-[90%] txt-amarillo pb-2 font-semibold text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">We develop & create digital future</h3>

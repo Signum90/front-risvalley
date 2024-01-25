@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="w-full flex justify-center px-8 mt-[100px] pb-8 text-white">
       {/* contenedor responsibe */}
-      <div className="max-w-[1300px] container flex flex-col gap-8">
+      <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col gap-8">
         {/* footer superior */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-24 mb-16">
           {/* logo - redes - info */}
