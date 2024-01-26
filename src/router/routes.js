@@ -10,6 +10,8 @@ export const PublicRoutes = {
 
 export const PrivateRoutes = {
   DASHBOARD: 'dashboard',
-  DASH_ENTITY: 'controlEntity',
-  DASH_EVENTS: 'controlEvents'
+  DASH_DIRECTORY: 'directory',
+  DASH_EVENTS: 'events',
+  DASH_INNOVATION: 'innovation',
+  DASH_REPOSITORY: 'repository'
 }

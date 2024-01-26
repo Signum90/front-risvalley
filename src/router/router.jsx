@@ -13,8 +13,12 @@ import Directory from "../pages/directory/Directory"
 import Layout from "../components/Layout"
 import NotFound from "../pages/404/NotFound"
 
-import Dashboard from "../pages/dashboard/Dashboard"
-import ControlEntity from "../pages/dashboard/ControlEntity"
+/* ---------------- Dashboard Pages ---------------- */
+import Dashboard from "../pages/dashboard/Dashboard";
+import DashDirectory from "../pages/dashboard/directory/DashDirectory";
+import DashEvents from "../pages/dashboard/events/DashEvents";
+import DashInnovation from "../pages/dashboard/innovation/DashInnovation";
+import DashRepository from "../pages/dashboard/repository/DashRepository";
 
 /* ---------------- load-data ---------------- */
 import { uploadChallengers } from "../pages/innovation/upload"
@@ -27,7 +31,7 @@ import { PrivateRoutes, PublicRoutes } from "./routes"
 
 /* ---------------- Guard Autentication ---------------- */
 import AuthGuard from "../guards/auth.guard"
-
+console.log('Ruta actual:', window.location.pathname);
 /* ---------------- Router ---------------- */
 export const router = createBrowserRouter([
   {
@@ -79,9 +83,22 @@ export const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: PrivateRoutes.DASH_ENTITY,
-        element: <ControlEntity />,
+        path: PrivateRoutes.DASH_DIRECTORY,
+        element: <DashDirectory />,
       },
+      {
+        path: PrivateRoutes.DASH_EVENTS,
+        element: <DashEvents />,
+      },
+      {
+        path: PrivateRoutes.DASH_INNOVATION,
+        element: <DashInnovation />,
+      },
+      {
+        path: PrivateRoutes.DASH_REPOSITORY,
+        element: <DashRepository />,
+      },
+
     ]
   }
 ])

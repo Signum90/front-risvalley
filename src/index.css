@@ -8,6 +8,22 @@
   --rojo: #EB5D60;
   --azul: #4DAAE4;
 }
+@font-face {
+  /* Roc Grotesk | Bold */
+  font-family: 'rocgrotesk';
+  src: url('../public/fonts/font-rocgrotesk-bold.otf');
+}
+@font-face {
+  /* Kumbh Sans |  ExtraLight 200 */
+  font-family: 'kumbh';
+  src: url('../public/fonts/font-kumbhsans.ttf');
+}
+.font-r {
+  font-family: 'rocgrotesk';
+}
+.font-k {
+  font-family: 'kumbh';
+}
 
 .bg-verde {
   background-color: var(--verde);
