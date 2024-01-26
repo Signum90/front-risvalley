@@ -16,10 +16,10 @@ function App () {
     <div className="h-full w-full overflow-x-hidden">
       {/*  hero image */}
       <section className="w-full h-screen flex flex-col justify-center items-center">
-        <div className="font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
-          <h2 className="text-center">Welcome to</h2>
-          <h2 className="text-center">prisma <span className="txt-amarillo">your key</span></h2>
-          <h3 className="text-center">to innovation</h3>
+        <div className="font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-r">
+          <h2 className="text-center">Bienvenido a</h2>
+          <h2 className="text-center">Rispark <span className="txt-amarillo">tu llave</span></h2>
+          <h3 className="text-center">al cambio</h3>
         </div>
       </section>
       {/* info risvalley */}
@@ -27,7 +27,7 @@ function App () {
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
           {/* subitle */}
-          <h1 className="text-3xl font-medium md:text-5xl txt-verde">Risvalley</h1>
+          <h1 className="text-3xl font-medium md:text-5xl txt-verde font-r">Risvalley</h1>
           {/* contenedor asistencia */}
           <div className="w-full flex gap-4 flex-col md:flex-row lg:w-[700px] xl:w-[800px] 2xl:w-[850px] lg:justify-between">
             {/* infor subitulo */}
@@ -135,8 +135,8 @@ function App () {
       <section id="carrousel-section-home" className="h-fit w-full overflow-x-auto my-[120px]">
         <div className="flex gap-24 justify-start text-[200px]" >
           {items.map((item) => (
-            <div key={item.id} className="flex flex-nowrap gap-[100px]">
-              <h3>{item.content}</h3>
+            <div key={item.id} className="flex flex-nowrap gap-[100px] font-r">
+              <h3 style={{WebkitTextStroke:"1px white", color:"black"}}>{item.content}</h3>
               <p>.</p>
             </div>
           ))}
