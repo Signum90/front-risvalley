@@ -1,19 +1,29 @@
 import { useLoaderData } from "react-router-dom"
 import { FaCaretRight, FaArrowRight as FlechaDerecha } from "react-icons/fa6";
+import CarrouselText from "./components/CarrouselText";
 
 function App () {
 
   const { actors } = useLoaderData()
   console.log(actors);
 
-  const items = [
-    { id: 1, content: 'Innovative' },
-    { id: 2, content: 'Empowering' },
-    { id: 3, content: 'Revolutionizing' },
+  // card - service
+  const contentService = [
+    { title: '01. Logistics', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
+    { title: '02. Desing & Art', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
+    { title: '03. Machine learning', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
+  ]
+
+  // stadistics
+  const stadisticData = [
+    { title: 'Projects', value: '98' },
+    { title: 'People', value: '65' },
+    { title: 'Universitys', value: '10' },
+    { title: 'Dreams', value: '15' }
   ]
 
   return (
-    <div className="h-full w-full overflow-x-hidden">
+    <div className="h-full w-full">
       {/*  hero image */}
       <section className="w-full h-screen flex flex-col justify-center items-center">
         <div className="font-medium text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-r">
@@ -48,35 +58,24 @@ function App () {
       <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col lg:flex-row gap-4 lg:justify-between">
-          {/* cards */}
+          {/* cards container */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            {/* targeta 1 */}
-            <div className="h-[350px] flex flex-col gap-4">
-              <div className="h-[80%] w-full bg-yellow-300"></div>
-              <div className="h-[10%] w-full">01. Logistics</div>
-              <hr />
-              <div className="h-[10%] w-full">
-                Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.
+            {/* cards */}
+            {contentService.map((service) => (
+              <div key={service.title} className="h-[350px] flex flex-col gap-4 group cursor-pointer">
+                <div className="h-[80%] w-full bg-yellow-300"></div>
+                <div className="h-[10%] w-full text-lg font-medium flex gap-2 items-center justify-between">
+                  {service.title}
+                  <button className="group-hover:border-white transition-all duration-300 border-[1px] h-8 w-8 rounded-full border-gray-600 flex items-center justify-center">
+                    <FlechaDerecha />
+                  </button>
+                </div>
+                <hr />
+                <div className="h-[10%] w-full">
+                  {service.description}
+                </div>
               </div>
-            </div>
-            {/* targeta 2 */}
-            <div className="h-[350px] flex flex-col gap-4">
-              <div className="h-[80%] w-full bg-yellow-300"></div>
-              <div className="h-[10%] w-full">02. Desing & Art</div>
-              <hr />
-              <div className="h-[10%] w-full">
-                Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.
-              </div>
-            </div>
-            {/* targeta 3 */}
-            <div className="h-[350px] flex flex-col gap-4">
-              <div className="h-[80%] w-full bg-yellow-300"></div>
-              <div className="h-[10%] w-full">03. Machine learning</div>
-              <hr />
-              <div className="h-[10%] w-full">
-                Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -108,40 +107,17 @@ function App () {
           </p>
           {/* autor frase */}
           <div className="pt-8 w-full grid grid-cols-4">
-            {/* Projects */}
-            <div className="relative text-center h-[160px] flex items-center justify-center">
-              <p className="text-[160px] font-bold text-gray-900">98</p>
-              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">Projects</h4>
-            </div>
-            {/* People */}
-            <div className="relative text-center h-[160px] flex items-center justify-center">
-              <p className="text-[160px] font-bold text-gray-900">65</p>
-              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">People</h4>
-            </div>
-            {/* Universitys */}
-            <div className="relative text-center h-[160px] flex items-center justify-center">
-              <p className="text-[160px] font-bold text-gray-900">10</p>
-              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">Universitys</h4>
-            </div>
-            {/* Dreams */}
-            <div className="relative text-center h-[160px] flex items-center justify-center">
-              <p className="text-[160px] font-bold text-gray-900">15</p>
-              <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">Dreams</h4>
-            </div>
+            {stadisticData.map( stadistic => (
+              <div key={stadistic.title} className="relative text-center h-[160px] flex items-center justify-center">
+                <p className="text-[160px] font-bold text-gray-900">{stadistic.value}</p>
+                <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">{stadistic.title}</h4>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       {/* carrousel text */}
-      <section id="carrousel-section-home" className="h-fit w-full overflow-x-auto my-[120px]">
-        <div className="flex gap-24 justify-start text-[200px]" >
-          {items.map((item) => (
-            <div key={item.id} className="flex flex-nowrap gap-[100px] font-r">
-              <h3 style={{WebkitTextStroke:"1px white", color:"black"}}>{item.content}</h3>
-              <p>.</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CarrouselText />
       {/* mas estadisticas */}
       <section className="w-full flex justify-center px-8 my-[120px]">
         {/* contenedor responsibe */}

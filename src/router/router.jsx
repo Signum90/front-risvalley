@@ -7,11 +7,12 @@ import App from "../App"
 import Library from "../pages/library/Library"
 import Innovation from "../pages/innovation/Innovation"
 import Service from "../pages/service/service"
-import We from "../pages/we/we"
+import AboutUs from "../pages/about/AboutUs"
 import Courses from "../pages/courses/Courses"
 import Directory from "../pages/directory/Directory"
 import Layout from "../components/Layout"
 import NotFound from "../pages/404/NotFound"
+import Contact from "../pages/contact/Contact"
 
 /* ---------------- Dashboard Pages ---------------- */
 import Dashboard from "../pages/dashboard/Dashboard";
@@ -23,7 +24,7 @@ import DashRepository from "../pages/dashboard/repository/DashRepository";
 /* ---------------- load-data ---------------- */
 import { uploadChallengers } from "../pages/innovation/upload"
 import { uploadLibrary } from "../pages/library/upload"
-import { uploadTeam } from "../pages/we/uploadTeam"
+import { uploadTeam } from "../pages/about/uploadTeam"
 import { uploadActors } from "../upload"
 
 /* ---------------- Routes ---------------- */
@@ -31,7 +32,8 @@ import { PrivateRoutes, PublicRoutes } from "./routes"
 
 /* ---------------- Guard Autentication ---------------- */
 import AuthGuard from "../guards/auth.guard"
-console.log('Ruta actual:', window.location.pathname);
+
+
 /* ---------------- Router ---------------- */
 export const router = createBrowserRouter([
   {
@@ -60,7 +62,7 @@ export const router = createBrowserRouter([
       },
       {
         path: PublicRoutes.NOSOTROS,
-        element: <We />,
+        element: <AboutUs />,
         loader: uploadTeam
       },
       {
@@ -70,6 +72,10 @@ export const router = createBrowserRouter([
       {
         path: PublicRoutes.COURSES,
         element: <Courses />,
+      },
+      {
+        path: PublicRoutes.CONTACT,
+        element: <Contact />,
       },
     ],
   },

@@ -13,6 +13,7 @@
   font-family: 'rocgrotesk';
   src: url('../public/fonts/font-rocgrotesk-bold.otf');
 }
+
 @font-face {
   /* Kumbh Sans |  ExtraLight 200 */
   font-family: 'kumbh';
@@ -82,16 +83,4 @@ html {
 
 *::-webkit-scrollbar-track {
   background: black;
-}
-
-/* ===== Section de carrosel de texto - HOME ===== */
-
-/* secction de carrousel - chrome edge Safari */
-#carrousel-section-home::-webkit-scrollbar {
-  width: 0px;
-}
-
-/* secction de carrousel - firefox */
-#carrousel-section-home::-webkit-scrollbar {
-  width: 0px;
 }

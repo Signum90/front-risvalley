@@ -3,9 +3,10 @@ export const PublicRoutes = {
   LIBRARY: 'library',
   INNOVATION: 'innovation',
   SERVICE: 'service',
-  NOSOTROS: 'nosotros',
+  NOSOTROS: 'about-us',
   DIRECTORY: 'directory',
   COURSES: 'courses',
+  CONTACT: 'contact',
 }
 
 export const PrivateRoutes = {
