@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const CarrouselText = () => {
+
   const items = [
     { content: 'Innovative', dot: '.' },
     { content: 'Empowering', dot: '.' },
@@ -10,9 +11,7 @@ const CarrouselText = () => {
 
   // Duplica los elementos para lograr una transición continua y dar un mejor efecto
   const duplicatedItems = [...items, ...items, ...items, ...items];
-
   const containerRef = useRef(null)
-
   useEffect(() => {
 
     const tl = gsap.timeline({ repeat: -1, yoyo: false });
