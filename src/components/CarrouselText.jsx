@@ -22,6 +22,8 @@ const CarrouselText = () => {
       { x: `-${100 * items.length}%`, duration: 15 * items.length, ease: "linear" }
     )
 
+    return () => tl.kill(); // Detener la animación al desmontar el componente
+
   }, [items.length])
 
   return (
