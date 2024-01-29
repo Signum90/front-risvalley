@@ -22,15 +22,14 @@ export const NavBar = () => {
       <nav className="xl:max-w-[1100px] 2xl:max-w-[1300px] container my-auto">
         {/* contenedor de asistencia */}
         <div className="w-full h-[80px] flex items-center text-white">
-
           {/* estructura en laptop - pc */}
           <div className="w-full hidden justify-between xl:flex">
             {/* logo */}
-            <div className="w-[150px] my-auto h-full flex items-center justify-center">
+            <div className="w-[140px] my-auto h-full flex items-center justify-center">
               <img src="https://risvalley.b-cdn.net/wp-content/uploads/2020/09/RISVALLY-LOGO-200-148.png" alt="logo risvalley" />
             </div>
             {/* navegacion */}
-            <div className="w-full p-8 flex justify-center text-lg font-semibold gap-6">
+            <div className="w-full p-8 flex justify-center text-lg font-semibold gap-12">
 
               <Link to={PublicRoutes.HOME} >Inicio</Link>
 
@@ -60,9 +59,9 @@ export const NavBar = () => {
             </div>
             {/* iconos */}
             <div className="flex gap-4 items-center">
-              <LoginUser onClick={LoginUserControl} className="cursor-pointer border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
-              <AddUser className="cursor-pointer border-[2px] border-white min-w-10 min-h-10 rounded-full p-2" />
-              <Rocket className="cursor-pointer border-[2px]  border-white min-w-10 min-h-10 rounded-full p-2" />
+              <LoginUser onClick={LoginUserControl} className="cursor-pointer border-[2px] border-white min-w-[38px] min-h-[38px] rounded-full p-2" />
+              <AddUser className="cursor-pointer border-[2px] border-white min-w-[38px] min-h-[38px] rounded-full p-2" />
+              <Rocket className="cursor-pointer border-[2px]  border-white min-w-[38px] min-h-[38px] rounded-full p-2" />
             </div>
           </div>
 
