@@ -7,6 +7,7 @@ export const PublicRoutes = {
   DIRECTORY: 'directory',
   COURSES: 'courses',
   CONTACT: 'contact',
+  QUESTIONS: 'questions',
 }
 
 export const PrivateRoutes = {

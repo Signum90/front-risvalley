@@ -106,11 +106,11 @@ function App () {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac tristique nunc, eget pharetra felis.
           </p>
           {/* autor frase */}
-          <div className="pt-8 w-full grid grid-cols-4">
-            {stadisticData.map( stadistic => (
-              <div key={stadistic.title} className="relative text-center h-[160px] flex items-center justify-center">
-                <p className="text-[160px] font-bold text-gray-900">{stadistic.value}</p>
-                <h4 className="absolute top-[45%] txt-verde font-bold text-2xl">{stadistic.title}</h4>
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 pt-8">
+            {stadisticData.map( (stadistic, index) => (
+              <div key={stadistic.title} className="relative text-center h-[120px] flex items-center justify-center">
+                <p className="text-[100px] md:text-[120px] lg:text-[160px] w-full font-bold text-gray-900">{stadistic.value}</p>
+                <h4 className={`absolute top-[35%] h-[60px] txt-verde font-bold text-2xl flex items-center justify-center w-full ${index === 3 ? '' : index === 1 ? 'border-0 border-gray-900 md:border-r-[1px]' : 'border-r-[1px] border-gray-900'}`}>{stadistic.title}</h4>
               </div>
             ))}
           </div>
@@ -135,7 +135,7 @@ function App () {
             </div>
           </div>
           {/* estadisticas actores */}
-          <div className="bg-red-300">2</div>
+          <div className="bg-red-300 hidden md:block">2</div>
         </div>
       </section>
     </div>
