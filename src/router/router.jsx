@@ -13,6 +13,7 @@ import Directory from "../pages/directory/Directory"
 import Layout from "../components/Layout"
 import NotFound from "../pages/404/NotFound"
 import Contact from "../pages/contact/Contact"
+import Questions from "../pages/questions/Questions"
 
 /* ---------------- Dashboard Pages ---------------- */
 import Dashboard from "../pages/dashboard/Dashboard";
@@ -76,6 +77,10 @@ export const router = createBrowserRouter([
       {
         path: PublicRoutes.CONTACT,
         element: <Contact />,
+      },
+      {
+        path: PublicRoutes.QUESTIONS,
+        element: <Questions />,
       },
     ],
   },

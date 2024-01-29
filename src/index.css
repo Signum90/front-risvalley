@@ -62,6 +62,9 @@
   filter: blur(10px)
 }
 
+.br-amarillo {
+  border-color: var(--amarillo);
+}
 
 html {
   scroll-behavior: smooth;
