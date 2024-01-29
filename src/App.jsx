@@ -8,7 +8,7 @@ function App () {
   console.log(actors);
 
   // card - service
-  const contentService = [
+  const contentService = [  
     { title: '01. Logistics', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
     { title: '02. Desing & Art', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
     { title: '03. Machine learning', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
