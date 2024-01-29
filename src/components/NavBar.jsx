@@ -9,7 +9,7 @@ export const NavBar = () => {
   let location = useLocation()
 
   // si se ingresa a una de estas rutas se añade absolute al nav para otro comportamiento
-  const arrayLocations = [ PublicRoutes.HOME, '/'+PublicRoutes.NOSOTROS, '/'+PublicRoutes.QUESTIONS]
+  const arrayLocations = [ PublicRoutes.HOME, '/'+PublicRoutes.NOSOTROS]
 
   function LoginUserControl() {
     showModal()
