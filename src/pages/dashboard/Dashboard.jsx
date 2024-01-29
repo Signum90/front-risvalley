@@ -1,5 +1,6 @@
 import DashNavigation from "./components/DashNavigation";
 import { FaChartPie } from "react-icons/fa";
+import { IoIosMegaphone } from "react-icons/io";
 /**==================================================
  * DASHBOARD
 ================================================== */
@@ -49,7 +50,7 @@ const Dashboard = () => {
         <div className="p-2 flex flex-col md:flex-row">
           {/* SOLICITUDES OFERTANTES */}
           <div className="flex-1">
-            <h1>Solicitudes de Ofertantes</h1>
+            <h1 className="flex items-center gap-2"><IoIosMegaphone />Solicitudes de Ofertantes</h1>
             <div className="p-4">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400">

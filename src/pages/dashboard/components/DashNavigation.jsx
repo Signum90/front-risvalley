@@ -17,28 +17,28 @@ const DashNavigation = () => {
       {/* MENÚ */}
       <div className="flex flex-col h-full justify-between">
         <div className="p-2 mt-2 w-full flex flex-col gap-1 text-sm">
-          <button className="flex gap-2 w-full p-1 rounded hover:bg-slate-500 text-left bg-slate-400">
-            <MdDashboard className="mt-1 ml-1"/> 
+          <button className="flex gap-2 items-center w-full p-1 rounded hover:bg-slate-500 text-left bg-slate-400">
+            <MdDashboard className="ml-1"/> 
             Dashboard
           </button>
-          <button className="flex gap-2 w-full p-1 rounded hover:bg-slate-500 text-left">
-            <IoIosMegaphone className="mt-1 ml-1"/> 
+          <button className="flex gap-2 items-center w-full p-1 rounded hover:bg-slate-500 text-left">
+            <IoIosMegaphone className="ml-1"/> 
             Directorio de Ofertas
           </button>
-          <button className="flex gap-2 w-full p-1 rounded hover:bg-slate-500 text-left">
-            <FaUsers className="mt-1 ml-1"/> 
+          <button className="flex gap-2 items-center w-full p-1 rounded hover:bg-slate-500 text-left">
+            <FaUsers className="ml-1"/> 
             Gestión de Usuarios 
           </button>
-          <button className="flex gap-2 w-full p-1 rounded hover:bg-slate-500 text-left">
-            <MdScience className="mt-1 ml-1"/> 
+          <button className="flex gap-2 items-center w-full p-1 rounded hover:bg-slate-500 text-left">
+            <MdScience className="ml-1"/> 
             Gestión de Retos 
           </button>
-          <button className="flex gap-2 w-full p-1 rounded hover:bg-slate-500 text-left">
-            <FaCalendarAlt className="mt-1 ml-1"/> 
+          <button className="flex gap-2 items-center w-full p-1 rounded hover:bg-slate-500 text-left">
+            <FaCalendarAlt className="ml-1"/> 
             Gestión de Eventos 
           </button>
-          <button className="flex gap-2 w-full p-1 rounded hover:bg-slate-500 text-left">
-            <LuBrainCircuit className="mt-1 ml-1"/> 
+          <button className="flex gap-2 items-center w-full p-1 rounded hover:bg-slate-500 text-left">
+            <LuBrainCircuit className="ml-1"/> 
             Conocimientos 
           </button>
         </div>
