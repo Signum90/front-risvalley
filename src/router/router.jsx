@@ -21,6 +21,7 @@ import DashDirectory from "../pages/dashboard/directory/DashDirectory";
 import DashEvents from "../pages/dashboard/events/DashEvents";
 import DashInnovation from "../pages/dashboard/innovation/DashInnovation";
 import DashRepository from "../pages/dashboard/repository/DashRepository";
+import DashUsers from "../pages/dashboard/users/DashUsers"
 
 /* ---------------- load-data ---------------- */
 import { uploadChallengers } from "../pages/innovation/upload"
@@ -109,7 +110,10 @@ export const router = createBrowserRouter([
         path: PrivateRoutes.DASH_REPOSITORY,
         element: <DashRepository />,
       },
-
+      {
+        path: PrivateRoutes.DASH_USERS,
+        element: <DashUsers/>
+      }
     ]
   }
 ])
