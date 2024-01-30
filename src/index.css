@@ -60,6 +60,7 @@ p {
 summary {
   display: flex;
   justify-content: space-between;
+  font-family: 'kumbh';
 }
 
 /* Create a new custom triangle on the right side */
@@ -71,5 +72,5 @@ summary::after {
 
 details[open] > summary::after {
   content: '-';
-  color: #4DAAE4;
+  color: var(--amarillo);
 }
