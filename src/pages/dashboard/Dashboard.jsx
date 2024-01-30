@@ -1,5 +1,8 @@
 import DashNavigation from "./components/DashNavigation";
 import { FaChartPie } from "react-icons/fa";
+import { IoIosMegaphone } from "react-icons/io";
+import { MdScience } from "react-icons/md";
+import { GrContact } from "react-icons/gr";
 /**==================================================
  * DASHBOARD
 ================================================== */
@@ -7,7 +10,7 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen overflow-hidden">
       <DashNavigation />
-      <div className="flex-1 bg-gray-800 text-white p-2 overflow-y-scroll md:overflow-hidden">
+      <div className="transition opacity-100 flex-1 bg-gray-800 text-white p-2 overflow-y-scroll md:overflow-hidden">
         {/* ESTADÍSTICAS GENERALES */}
         <div className="p-2">
           <h1 className="text-4xl flex gap-1">
@@ -49,7 +52,7 @@ const Dashboard = () => {
         <div className="p-2 flex flex-col md:flex-row">
           {/* SOLICITUDES OFERTANTES */}
           <div className="flex-1">
-            <h1>Solicitudes de Ofertantes</h1>
+            <h1 className="flex items-center gap-2 text-lg"><IoIosMegaphone />Solicitudes de Ofertantes</h1>
             <div className="p-4">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -166,7 +169,7 @@ const Dashboard = () => {
           </div>
           {/* SOLICITUDES RETOS */}
           <div className="flex-1">
-            <h1>Solicitudes de Retos</h1>
+            <h1 className="flex items-center gap-2 text-lg"><MdScience/> Solicitudes de Retos</h1>
             <div className="p-2 h-48">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -211,7 +214,8 @@ const Dashboard = () => {
                 </table>
               </div>
             </div>
-            <h1>PQRS</h1>
+
+            <h1 className="flex items-center gap-2 text-lg"><GrContact/> PQRS</h1>
             <div className="p-2">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400">

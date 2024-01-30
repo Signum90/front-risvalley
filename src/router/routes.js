@@ -15,5 +15,6 @@ export const PrivateRoutes = {
   DASH_DIRECTORY: 'directory',
   DASH_EVENTS: 'events',
   DASH_INNOVATION: 'innovation',
-  DASH_REPOSITORY: 'repository'
+  DASH_REPOSITORY: 'repository',
+  DASH_USERS: 'users'
 }
