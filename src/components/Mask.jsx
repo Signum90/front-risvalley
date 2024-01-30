@@ -20,7 +20,7 @@ const Mask = () => {
   return (
     <>
       {/* scroll elevator */}
-      <button className={`btn-scroling-top fixed h-[80px] right-8 bottom-10 text-lg flex flex-col items-center gap-6 transition-all duration-300 hover:text-[#4DAAE4] ${scrollStatePosition > 20 ? 'visible' : 'invisible'}`} onClick={scrollToTop}>
+      <button className={`btn-scroling-top z-50 fixed h-[80px] right-8 bottom-10 text-lg flex flex-col items-center gap-6 transition-all duration-300 hover:text-[#4DAAE4] ${scrollStatePosition > 20 ? 'visible' : 'invisible'}`} onClick={scrollToTop}>
         <ArrowUp />
         <p className="-rotate-90">Elevar</p>
       </button>

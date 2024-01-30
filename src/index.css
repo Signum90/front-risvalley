@@ -87,3 +87,21 @@ html {
 *::-webkit-scrollbar-track {
   background: black;
 }
+
+/* Remove the default triangle */
+summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Create a new custom triangle on the right side */
+summary::after {
+  display: inline-block;
+  content: '+';
+  transition: 0.2s;
+}
+
+details[open] > summary::after {
+  content: '-';
+  color: #4DAAE4;
+}
