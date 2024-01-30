@@ -23,7 +23,7 @@ export const MLogin = () => {
             Password
             <input id="login-pass" className="border border-black" type="text" />
           </label>
-          <button type="submit" className="bg-azul text-white rounded-sm mt-2 ml-4">
+          <button type="submit" className="bg-quaternary text-white rounded-sm mt-2 ml-4">
             Ingresar
           </button>
         </form>

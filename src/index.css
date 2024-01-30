@@ -26,46 +26,6 @@
   font-family: 'kumbh';
 }
 
-.bg-verde {
-  background-color: var(--verde);
-}
-
-.bg-amarillo {
-  background-color: var(--amarillo);
-}
-
-.bg-rojo {
-  background-color: var(--rojo);
-}
-
-.bg-azul {
-  background-color: var(--azul);
-}
-
-.txt-verde {
-  color: var(--verde);
-}
-
-.txt-amarillo {
-  color: var(--amarillo);
-}
-
-.txt-rojo {
-  color: var(--rojo);
-}
-
-.txt-azul {
-  color: var(--azul);
-}
-
-.bg-gradient-radial {
-  filter: blur(10px)
-}
-
-.br-amarillo {
-  border-color: var(--amarillo);
-}
-
 html {
   scroll-behavior: smooth;
   background-color: black;
@@ -86,6 +46,14 @@ html {
 
 *::-webkit-scrollbar-track {
   background: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'rocgrotesk';
+}
+
+p {
+  font-family: 'kumbh';
 }
 
 /* Remove the default triangle */

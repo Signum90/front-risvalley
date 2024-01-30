@@ -12,6 +12,7 @@ const CarrouselText = () => {
     { content: 'Empowering', dot: '.' },
     { content: 'Revolutionizing', dot: '.' },
   ]
+
   const colorText = () => {
     if (location.pathname === '/' + PublicRoutes.QUESTIONS) return '#9EC864';
     // Añade un color predeterminado para otros casos
@@ -37,9 +38,9 @@ const CarrouselText = () => {
 
   return (
     <section className="overflow-hidden">
-      <div ref={containerRef} className="flex gap-24 text-[180px]">
+      <div ref={containerRef} className="flex gap-24 text-[100px] sm:text-[120px] md:text-[140px] lg:text-[160px] xl:text-[180px]">
         {duplicatedItems.map((item, index) => (
-          <div key={index} className="item font-r flex gap-12">
+          <div key={index} className="item font-custom1 flex gap-12">
             <h3 style={{ WebkitTextStroke: `2px ${colorText()}`, color: "black" }}>
               {item.content}
             </h3>

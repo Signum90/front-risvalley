@@ -1,5 +1,6 @@
 import { FaFacebookF as FacebookIcon, FaXTwitter as XTwitterIcon, FaInstagram as InstagramIcon, FaLinkedinIn as LinkedinIcon, FaArrowUpLong as ArrowUp } from "react-icons/fa6";
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 const Mask = () => {
 
@@ -26,22 +27,22 @@ const Mask = () => {
       </button>
       {/* redes */}
       <div className="invisible z-50 -left-44 bottom-1/2 xl:visible fixed flex gap-8 -rotate-90">
-        <p className="flex items-center gap-2">
+        <Link to="" target="_blank" className="flex items-center gap-2 hover:text-gray-500 transition-all duration-300">
           <FacebookIcon />
           Facebook
-        </p>
-        <p className="flex items-center gap-2">
+        </Link>
+        <Link to="" target="_blank" className="flex items-center gap-2 hover:text-gray-500 transition-all duration-300">
           <XTwitterIcon />
           Twitter
-        </p>
-        <p className="flex items-center gap-2">
+        </Link>
+        <Link to="" target="_blank" className="flex items-center gap-2 hover:text-gray-500 transition-all duration-300">
           <InstagramIcon />
           Instagram
-        </p>
-        <p className="flex items-center gap-2">
+        </Link>
+        <Link to="" target="_blank" className="flex items-center gap-2 hover:text-gray-500 transition-all duration-300">
           <LinkedinIcon />
           Linkedin
-        </p>
+        </Link>
       </div>
     </>
   )

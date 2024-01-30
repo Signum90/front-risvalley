@@ -12,6 +12,10 @@ module.exports = {
         tertiary: "#EB5D60",
         quaternary: "#4DAAE4",
       },
+      fontFamily: {
+        custom1: ['rocgrotesk', 'sans-serif'],
+        custom2: ['kumbh', 'sans-serif'],
+      },
     },
   },
   plugins: [],
