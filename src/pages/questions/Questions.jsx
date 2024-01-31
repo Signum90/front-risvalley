@@ -9,7 +9,7 @@ gsap.registerPlugin(TextPlugin)
 
 function Questions () {
 
-  const machineTextRef = useRef(null);
+  const machineTextRef = useRef(null)
 
   useEffect(() => {
 

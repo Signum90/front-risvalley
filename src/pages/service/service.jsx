@@ -96,6 +96,7 @@ const Service = () => {
           </div>
         </div>
       </section>
+      {/* types */}
       <section className="w-full flex justify-center px-4 my-[110px]">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container grid sm:grid-cols-2 md:grid-cols-3 items-center justify-between gap-8">
