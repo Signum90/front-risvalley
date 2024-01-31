@@ -1,15 +1,14 @@
-import DashNavigation from "../components/DashNavigation";
-import "../dashboard.css";
-
 /**==================================================
  * DASHBOARD REPOSITORY
 ================================================== */
+import { LuBrainCircuit } from "react-icons/lu";
 const DashRepository = () => {
   return (
-    <div className="flex h-screen overflow-hidden">
-      <DashNavigation />
-      <div className="flex-1 bg-gray-800 text-white p-2">
-        Repositorio de Conocimientos
+    <div className="fade-in">
+      <div className="p-2 border-b">
+        <h1 className="text-xl flex gap-1 font-k font-bold items-center">
+          <LuBrainCircuit className="text-xl mr-1"/>Gestión de Concimientos
+        </h1>
       </div>
     </div>
   )
