@@ -7,9 +7,9 @@ const Contact = () => {
   return (
     <div className="h-full w-full">
       {/* form */}
-      <section className="px-4 w-full h-screen flex flex-col justify-center items-center">
+      <section className="px-4 mt-12 w-full h-fit flex flex-col justify-center items-center">
         {/* contenedor responsibe */}
-        <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container h-screen xl:my-[100px] flex flex-col">
+        <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container flex flex-col">
           {/* titulo */}
           <div className="h-fit text-4xl md:text-6xl">
             <p className="font-custom1">Have a <span className="text-quaternary">cool project ?</span></p>
@@ -17,19 +17,19 @@ const Contact = () => {
           </div>
           {/* form - image */}
           <div className="relative w-full h-full py-14 flex flex-col">
-            <img src="https://winframedemo.online/wp-content/uploads/2023/08/img-44-copyright.jpg" className="w-[60%] lg:h-full" alt="img-demo" />
-            <form className="bg-[#17111d] p-12 flex flex-col justify-start absolute top-0 right-0 w-[50%] h-[75%]">
+            <img src="https://winframedemo.online/wp-content/uploads/2023/08/img-44-copyright.jpg" className="w-full md:w-[70%] xl:w-[60%]" alt="img-demo" />
+            <form className="bg-[#17111d] p-6 lg:p-12 flex flex-col justify-start md:absolute top-0 right-0 md:w-[50%] md:h-[85%] lg:h-[75%] xl:h-[80%] 2xl:h-[70%]">
               <div className="relative w-full">
                 <input type="text" placeholder="Name" className="pl-8 w-full bg-transparent border-b p-4 text-lg text-gray-500 focus:outline-none focus:text-white" />
-                <FaRegUser className="text-[20px] absolute top-1/2 -translate-y-1/2 text-gray-500" />
+                <FaRegUser className="text-md lg:text-[20px] absolute top-1/2 -translate-y-1/2 text-gray-500" />
               </div>
               <div className="relative w-full">
                 <input type="email" placeholder="Email" className="pl-8 w-full bg-transparent border-b p-4 text-lg text-gray-500 focus:outline-none focus:text-white" />
-                <MdOutlineEmail className="text-[20px] absolute top-1/2 -translate-y-1/2 text-gray-500" />
+                <MdOutlineEmail className="text-md lg:text-[20px] absolute top-1/2 -translate-y-1/2 text-gray-500" />
               </div>
               <div className="relative w-full">
                 <textarea name="help" placeholder="How can help you ?" className="pl-8 w-full h-[100px] bg-transparent border-b p-4 text-lg text-gray-500 focus:outline-none focus:text-white"></textarea>
-                <LiaPenSolid className="text-[20px] absolute top-[19%] text-gray-500" />
+                <LiaPenSolid className="text-md lg:text-[20px] absolute top-[19%] text-gray-500" />
               </div>
               <div className="flex items-center gap-4 my-8">
                 <input type="checkbox" className="bg-transparent" />
@@ -44,7 +44,7 @@ const Contact = () => {
         </div>
       </section>
       {/* contactos */}
-      <section className="px-4 w-full flex justify-center items-center my-[120px]">
+      <section className="px-4 w-full flex justify-center items-center">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* phone */}
