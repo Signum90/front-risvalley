@@ -2,7 +2,6 @@ import { FaChartPie } from "react-icons/fa";
 import { IoIosMegaphone } from "react-icons/io";
 import { MdScience } from "react-icons/md";
 import { GrContact } from "react-icons/gr";
-import { useStore } from "../../../globalContext/ejemplo";
 // import { useLocation } from "react-router-dom";
 /**==================================================
  * DASHBOARD
