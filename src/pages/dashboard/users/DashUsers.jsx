@@ -1,4 +1,6 @@
 import DashNavigation from "../components/DashNavigation";
+import "../dashboard.css";
+
 /**==================================================
  * DASHBOARD USERS
 ================================================== */
