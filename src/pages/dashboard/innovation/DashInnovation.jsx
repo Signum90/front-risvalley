@@ -1,4 +1,5 @@
 import DashNavigation from "../components/DashNavigation";
+import "../dashboard.css";
 
 /**==================================================
  * DASHBOARD INNOVATION

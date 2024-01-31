@@ -3,6 +3,7 @@ import { FaChartPie } from "react-icons/fa";
 import { IoIosMegaphone } from "react-icons/io";
 import { MdScience } from "react-icons/md";
 import { GrContact } from "react-icons/gr";
+import "./dashboard.css";
 /**==================================================
  * DASHBOARD
 ================================================== */
@@ -10,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen overflow-hidden">
       <DashNavigation />
-      <div className="transition opacity-100 flex-1 bg-gray-800 text-white p-2 overflow-y-scroll md:overflow-hidden">
+      <div className="fade-in opacity-100 flex-1 bg-gray-800 text-white p-2 overflow-y-scroll md:overflow-hidden">
         {/* ESTADÍSTICAS GENERALES */}
         <div className="p-2">
           <h1 className="text-4xl flex gap-1">
