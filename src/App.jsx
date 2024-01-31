@@ -119,7 +119,7 @@ function App () {
       {/* carrousel text */}
       <CarrouselText />
       {/* mas estadisticas */}
-      <section className="w-full flex justify-center px-4 my-[110px]">
+      <section className="w-full flex justify-center px-4 my-[110px] overflow-x-hidden">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1200px] 2xl:max-w-[1400px] container grid sm:grid-cols-1 md:grid-cols-2 items-center gap-8">
           {/* We develop & create digital future */}

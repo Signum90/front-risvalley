@@ -28,7 +28,7 @@ const Contact = () => {
                 <MdOutlineEmail className="text-md lg:text-[20px] absolute top-1/2 -translate-y-1/2 text-gray-500" />
               </div>
               <div className="relative w-full">
-                <textarea name="help" placeholder="How can help you ?" className="pl-8 w-full h-[100px] bg-transparent border-b p-4 text-lg text-gray-500 focus:outline-none focus:text-white"></textarea>
+                <textarea name="help" placeholder="How can help you ?" className="resize-none pl-8 w-full h-[100px] bg-transparent border-b p-4 text-lg text-gray-500 focus:outline-none focus:text-white"></textarea>
                 <LiaPenSolid className="text-md lg:text-[20px] absolute top-[19%] text-gray-500" />
               </div>
               <div className="flex items-center gap-4 my-8">
