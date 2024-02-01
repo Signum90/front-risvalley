@@ -3,15 +3,18 @@
 ================================================== **/
 import { create } from 'zustand'
 // > Almancen de Autenticación
-export const authStore = create((set) => ({
+const authStore = create((set) => ({
   // Auth var
-  auth: false,
+  auth: true,
+  type: 'user',
   // Login
-  login: set((state) => ({
-    auth: state.auth = true
+  login: () => set((state) => ({
+    auth: state.auth = true,
+    type: state.type = 'admin'
   })),
   // Cierre de Session
-  logout: set((state) => ({
+  logout: () => set((state) => ({
     auth: state.auth = false
   }))
 }))
+ export default authStore
