@@ -9,9 +9,9 @@ function App () {
 
   // card - service
   const contentService = [
-    { title: '01. Logistics', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
-    { title: '02. Desing and Art', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
-    { title: '03. Machine learning', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.' },
+    { title: '01. Logistics', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.', img: 'https://winframedemo.online/wp-content/uploads/2021/04/sdfsdfsdf.jpg' },
+    { title: '02. Desing and Art', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.', img: 'https://winframedemo.online/wp-content/uploads/2021/04/diseno-collage-concepto-metaverso_23-2149419860.jpg' },
+    { title: '03. Machine learning', description: 'Consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore.', img: 'https://winframedemo.online/wp-content/uploads/2021/04/hombre-que-llevaba-gafas-inteligentes-tocando-pantalla-virtual-tecnologia-futurista-remix-digital_53876-104247.jpg' },
   ]
 
   // stadistics
@@ -62,8 +62,8 @@ function App () {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {/* cards */}
             {contentService.map((service) => (
-              <div key={service.title} className="h-[350px] flex flex-col gap-4 group cursor-pointer">
-                <div className="h-[80%] w-full bg-yellow-300"></div>
+              <div key={service.title} className="h-[450px] sm:h-[350px] flex flex-col gap-4 group cursor-pointer">
+                <img src={service.img} className="h-[80%] w-full" alt="" />
                 <div className="h-[10%] w-full text-lg font-medium flex gap-2 items-center justify-between">
                   <h4 className="text-2xl" >{service.title}</h4>
                   <button className="group-hover:border-white transition-all duration-300 border-[1px] h-8 w-8 rounded-full border-gray-600 flex items-center justify-center">
@@ -119,7 +119,7 @@ function App () {
       {/* carrousel text */}
       <CarrouselText />
       {/* mas estadisticas */}
-      <section className="w-full flex justify-center px-4 my-[110px]">
+      <section className="w-full flex justify-center px-4 my-[110px] overflow-x-hidden">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1200px] 2xl:max-w-[1400px] container grid sm:grid-cols-1 md:grid-cols-2 items-center gap-8">
           {/* We develop & create digital future */}
@@ -142,10 +142,12 @@ function App () {
               <p className="text-secondary font-custom1 opacity-40 text-[130px] xl:text-[180px] h-[150px] transform -translate-y-[40px]">60</p>
             </div>
             {/* imagen 1 */}
-            <div className="bg-red-300 w-[240px] xl:w-auto">1</div>
+            <img src="https://winframedemo.online/wp-content/uploads/elementor/thumbs/img-88-copyright-qieyl7qof5xsums88vurz46p2lmhswrj15ie4s9p44.jpg" className="w-[240px] xl:w-auto" alt="" />
             {/* imagen 2 */}
             <div className="relative h-[250px] xl:h-[330px] col-span-2">
-              <div className="absolute h-full w-[250px] xl:w-[330px] bg-blue-900 -top-[70px] transformt translate-x-[50%]"></div>
+              <img
+                className="absolute h-full w-[250px] xl:w-[330px] -top-[70px] transformt translate-x-[50%]"
+                src="https://winframedemo.online/wp-content/uploads/elementor/thumbs/sdfsdfsdf-qif36hp234tqxr9kprbvc4kj3bgz37sys1il62hx8m.jpg" alt="" />
             </div>
           </div>
         </div>

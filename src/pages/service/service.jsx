@@ -76,8 +76,9 @@ const Service = () => {
           {/* imagen and stadistics */}
           <div className="relative flex justify-center sm:px-8 md:px-0">
             {/* estadisticas */}
-            <div className="bg-red-300 w-full min-h-[400px] max-[530px] sm:w-[600px] sm:h-[500px] md:min-w-[260px] md:min-h-[300xp] xl:w-[570px] xl:h-[600px]">
-            </div>
+            <img
+            className="w-full min-h-[400px] max-[530px] sm:w-[600px] sm:h-[500px] md:min-w-[260px] md:min-h-[300xp] xl:w-[570px] xl:h-[600px]"
+              src="https://winframedemo.online/wp-content/uploads/elementor/thumbs/img-43-copyright-qieyo5yi6roviop84oyvuu3do826q3g3j7vz1r5rhi.jpg" alt="" />
             {/* conteo */}
             <div className="absolute h-[170px] bottom-0 w-full flex gap-6 justify-between sm:justify-start md:h-[200px] transform md:-translate-x-6 lg:-translate-x-12 lg:-translate-y-6">
               {/* conteo 1 */}
@@ -96,6 +97,7 @@ const Service = () => {
           </div>
         </div>
       </section>
+      {/* types */}
       <section className="w-full flex justify-center px-4 my-[110px]">
         {/* contenedor responsibe */}
         <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container grid sm:grid-cols-2 md:grid-cols-3 items-center justify-between gap-8">

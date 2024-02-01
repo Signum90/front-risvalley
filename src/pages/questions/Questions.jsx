@@ -9,7 +9,7 @@ gsap.registerPlugin(TextPlugin)
 
 function Questions () {
 
-  const machineTextRef = useRef(null);
+  const machineTextRef = useRef(null)
 
   useEffect(() => {
 
@@ -62,9 +62,9 @@ function Questions () {
       {/* carrousel */}
       <CarrouselText />
       {/* hero image */}
-      <section className="w-full flex justify-center px-6 h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] items-center bg-red-300 flex-col font-semibold text-3xl md:text-5xl">
-        <p>We make the</p>
-        <p>creative <span ref={machineTextRef}></span><span className='animate-pulse duration-75'>_</span></p>
+      <section id='heroImg_questions' className="w-full flex justify-center px-6 h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] items-center flex-col text-3xl md:text-6xl">
+        <p className='font-custom1' >We make the</p>
+        <p className='font-custom1' >creative <span ref={machineTextRef}></span><span className='animate-pulse duration-75'>_</span></p>
       </section>
       {/* video presentation */}
       <section className="w-full flex justify-center px-8 my-[120px]">

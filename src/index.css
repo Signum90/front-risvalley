@@ -74,3 +74,9 @@ details[open] > summary::after {
   content: '-';
   color: var(--amarillo);
 }
+
+#heroImg_questions {
+  background-image: url(https://winframedemo.online/wp-content/uploads/2021/04/img-61-copyright.jpg);
+  background-position: center center;
+  background-size: cover;
+}
