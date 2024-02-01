@@ -34,6 +34,7 @@ import { PrivateRoutes, PublicRoutes } from "./routes"
 
 /* ---------------- Guard Autentication ---------------- */
 import AuthGuard from "../guards/auth.guard"
+import Login from "../pages/login/Login"
 
 
 /* ---------------- Router ---------------- */
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
       {
         path: PublicRoutes.QUESTIONS,
         element: <Questions />,
+      },
+      {
+        path: PublicRoutes.LOGIN,
+        element: <Login />,
       },
     ],
   },

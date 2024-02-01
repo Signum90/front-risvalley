@@ -47,7 +47,7 @@ export const NavBar = () => {
 
   return (
     <div className={`w-full ${ arrayLocations.includes(location.pathname) ? 'absolute top-0' : '' } flex justify-center h-[150px] bg-opacity-65 bg-black`}>
-      {/* navbar - container responsibe*/}
+      {/* navbar - container*/}
       <nav className="xl:max-w-[1100px] 2xl:max-w-[1300px] px-4 md:px-0 container my-auto">
         {/* contenedor de asistencia */}
         <div className="w-full h-[80px] flex items-center text-white">
@@ -88,7 +88,9 @@ export const NavBar = () => {
             </div>
             {/* iconos */}
             <div className="flex gap-4 items-center">
-              <LoginUser className="cursor-pointer border-[2px] border-white min-w-[38px] min-h-[38px] rounded-full p-2 hover:text-secondary hover:border-secondary transition-all duration-300" />
+              <Link to={PublicRoutes.LOGIN}>
+                <LoginUser className="cursor-pointer border-[2px] border-white min-w-[38px] min-h-[38px] rounded-full p-2 hover:text-secondary hover:border-secondary transition-all duration-300" />
+              </Link>
               <AddUser className="cursor-pointer border-[2px] border-white min-w-[38px] min-h-[38px] rounded-full p-2 hover:text-secondary hover:border-secondary transition-all duration-300" />
               <Rocket className="cursor-pointer border-[2px]  border-white min-w-[38px] min-h-[38px] rounded-full p-2 hover:text-secondary hover:border-secondary transition-all duration-300" />
             </div>
