@@ -15,18 +15,30 @@ const AuthGuard = () => {
     const value = PrivateRoutes[key]
 
     // si es una ruta privdad
-    if (location.pathname == '/'+value || location.pathname == `/${PrivateRoutes.DASHBOARD}/`+value) {
+    if (location.pathname == '/dashboard' || location.pathname == `/${PrivateRoutes.DASHBOARD}/`+value) {
 
       // si no esta autenticado
       if (!auth || type === 'user') return <Navigate replace to={PublicRoutes.HOME} />
 
       // si esta autenticado
       return <LayoutDash />
-
     }
   }
 
-  return <Layout />
+  for (let key in PublicRoutes) {
+
+    const value = PublicRoutes[key]
+
+    // si es una ruta publica
+    if (location.pathname == '/' || location.pathname == '/'+value ) {
+
+      // si no esta autenticado
+      if (type === 'admin') return <Navigate replace to={PrivateRoutes.DASHBOARD} />
+
+      // si esta autenticado
+      return <Layout />
+    }
+  }
 
 
 }

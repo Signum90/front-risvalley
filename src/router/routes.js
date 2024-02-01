@@ -19,3 +19,22 @@ export const PrivateRoutes = {
   DASH_REPOSITORY: 'repository',
   DASH_USERS: 'users'
 }
+
+export const whaitList = [
+  '/',
+  'library',
+  'innovation',
+  'service',
+  'about-us',
+  'directory',
+  'courses',
+  'contact',
+  'questions',
+  'login',
+  'dashboard',
+  'directory',
+  'events',
+  'innovation',
+  'repository',
+  'users'
+]

@@ -6,7 +6,7 @@ import { create } from 'zustand'
 const authStore = create((set) => ({
   // Auth var
   auth: true,
-  type: 'admin',
+  type: 'user',
   // Login
   login: () => set((state) => ({
     auth: state.auth = true,
