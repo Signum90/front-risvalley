@@ -39,10 +39,8 @@ const Login = () => {
           <input id="pass" className="bg-transparent" placeholder="password" type="pass" />
         </form>
         <button type="sumbmit" className="p-2 bg-quaternary w-[100px]" onClick={() => {login()}}>
-          Simular Login
+          Simular Login como admin
         </button>
-
-        lost your passwoed
       </div>
     </section>
   )
