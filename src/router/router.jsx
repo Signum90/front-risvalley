@@ -88,7 +88,6 @@ export const router = createBrowserRouter([
       },
       {
         path: PrivateRoutes.DASHBOARD,
-        errorElement: <NotFound/>,
         children: [
           {
             index: true,
