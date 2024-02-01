@@ -10,17 +10,16 @@ import Service from "../pages/service/service"
 import AboutUs from "../pages/about/AboutUs"
 import Courses from "../pages/courses/Courses"
 import Directory from "../pages/directory/Directory"
-import Layout from "../components/Layout"
 import NotFound from "../pages/404/NotFound"
 import Contact from "../pages/contact/Contact"
 import Questions from "../pages/questions/Questions"
 
 /* ---------------- Dashboard Pages ---------------- */
-import Dashboard from "../pages/dashboard/home/Dashboard";
-import DashDirectory from "../pages/dashboard/directory/DashDirectory";
-import DashEvents from "../pages/dashboard/events/DashEvents";
-import DashInnovation from "../pages/dashboard/innovation/DashInnovation";
-import DashRepository from "../pages/dashboard/repository/DashRepository";
+import Dashboard from "../pages/dashboard/home/Dashboard"
+import DashDirectory from "../pages/dashboard/directory/DashDirectory"
+import DashEvents from "../pages/dashboard/events/DashEvents"
+import DashInnovation from "../pages/dashboard/innovation/DashInnovation"
+import DashRepository from "../pages/dashboard/repository/DashRepository"
 import DashUsers from "../pages/dashboard/users/DashUsers"
 
 /* ---------------- load-data ---------------- */
@@ -40,12 +39,11 @@ import Login from "../pages/login/Login"
 /* ---------------- Router ---------------- */
 export const router = createBrowserRouter([
   {
-    path: PublicRoutes.HOME,
-    element: <Layout/>,
+    element: <AuthGuard />,
     errorElement: <NotFound/>,
     children: [
       {
-        index: true,
+        path: PublicRoutes.HOME,
         element: <App />,
         loader: uploadActors,
       },
@@ -88,37 +86,36 @@ export const router = createBrowserRouter([
         path: PublicRoutes.LOGIN,
         element: <Login />,
       },
+      {
+        path: PrivateRoutes.DASHBOARD,
+        errorElement: <NotFound/>,
+        children: [
+          {
+            index: true,
+            element: <Dashboard />,
+          },
+          {
+            path: PrivateRoutes.DASH_DIRECTORY,
+            element: <DashDirectory />,
+          },
+          {
+            path: PrivateRoutes.DASH_EVENTS,
+            element: <DashEvents />,
+          },
+          {
+            path: PrivateRoutes.DASH_INNOVATION,
+            element: <DashInnovation />,
+          },
+          {
+            path: PrivateRoutes.DASH_REPOSITORY,
+            element: <DashRepository />,
+          },
+          {
+            path: PrivateRoutes.DASH_USERS,
+            element: <DashUsers/>
+          }
+        ]
+      }
     ],
   },
-  {
-    path: PrivateRoutes.DASHBOARD,
-    element: <AuthGuard />, // Content LAYOUT component
-    errorElement: <NotFound/>,
-    children: [
-      {
-        index: true,
-        element: <Dashboard />,
-      },
-      {
-        path: PrivateRoutes.DASH_DIRECTORY,
-        element: <DashDirectory />,
-      },
-      {
-        path: PrivateRoutes.DASH_EVENTS,
-        element: <DashEvents />,
-      },
-      {
-        path: PrivateRoutes.DASH_INNOVATION,
-        element: <DashInnovation />,
-      },
-      {
-        path: PrivateRoutes.DASH_REPOSITORY,
-        element: <DashRepository />,
-      },
-      {
-        path: PrivateRoutes.DASH_USERS,
-        element: <DashUsers/>
-      }
-    ]
-  }
 ])
