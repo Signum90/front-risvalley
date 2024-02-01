@@ -16,7 +16,7 @@ import Contact from "../pages/contact/Contact"
 import Questions from "../pages/questions/Questions"
 
 /* ---------------- Dashboard Pages ---------------- */
-import Dashboard from "../pages/dashboard/Dashboard";
+import Dashboard from "../pages/dashboard/home/Dashboard";
 import DashDirectory from "../pages/dashboard/directory/DashDirectory";
 import DashEvents from "../pages/dashboard/events/DashEvents";
 import DashInnovation from "../pages/dashboard/innovation/DashInnovation";
@@ -87,7 +87,7 @@ export const router = createBrowserRouter([
   },
   {
     path: PrivateRoutes.DASHBOARD,
-    element: <AuthGuard />,
+    element: <AuthGuard />, // Content LAYOUT component
     errorElement: <NotFound/>,
     children: [
       {
