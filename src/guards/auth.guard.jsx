@@ -1,14 +1,34 @@
 import { Navigate } from "react-router-dom"
-import Layout from "../pages/dashboard/Layout"
+import Layout from "../components/Layout"
 import authStore from "../Context/authStore"
+import LayoutDash from "../pages/dashboard/LayoutDash"
+import { useLocation } from "react-router-dom"
+import { PublicRoutes, PrivateRoutes } from "../router/routes"
 
-// importa el data del usuario que esta logeado o no
 const AuthGuard = () => {
-  // get zustand
-  const { auth } = authStore();
-  // const data = { id: 123455, username: 'jair', email: 'email@elmail.com' }
-  // obtener state del usuario - logeado o no
-  return auth ? <Layout /> : <Navigate replace to="/" />
+
+  const location = useLocation()
+  const { auth, type } = authStore()
+
+  for (let key in PrivateRoutes) {
+
+    const value = PrivateRoutes[key]
+
+    // si es una ruta privdad
+    if (location.pathname == '/'+value) {
+
+      // si no esta autenticado
+      if (!auth || type === 'user') return <Navigate replace to={PublicRoutes.HOME} />
+
+      // si esta autenticado
+      return <LayoutDash />
+
+    }
+    else {
+      return <Layout />
+    }
+  }
+
 
 }
 
