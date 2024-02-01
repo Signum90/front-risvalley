@@ -12,10 +12,6 @@ export const NavBar = () => {
   let location = useLocation()
   const navRef = useRef()
 
-  const handleResize = () => {
-    setDocumentWidth(document.documentElement.clientWidth);
-  }
-
   // si se ingresa a una de estas rutas se añade absolute al nav para otro comportamiento
   const arrayLocations = [ PublicRoutes.HOME, '/'+PublicRoutes.NOSOTROS]
 
@@ -30,12 +26,6 @@ export const NavBar = () => {
       document.documentElement.style.overflow = ''
     }
 
-    window.addEventListener('resize', handleResize)
-
-    // Limpia el listener cuando el componente se desmonta
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
   }, [visibilityNavMob])
 
 
@@ -111,7 +101,6 @@ export const NavBar = () => {
           </header>
           {/* body */}
           <div className="h-full flex items-center">
-            
           </div>
           {/* footer */}
           <footer className="py-4 flex gap-4 border-t-[1px]">
