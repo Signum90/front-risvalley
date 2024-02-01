@@ -5,7 +5,7 @@ import { create } from 'zustand'
 // > Almancen de Autenticación
 const authStore = create((set) => ({
   // Auth var
-  auth: true,
+  auth: false,
   type: 'user',
   // Login
   login: () => set((state) => ({
