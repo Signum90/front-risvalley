@@ -159,10 +159,10 @@ export const NavBar = () => {
           <div className="h-full flex flex-col justify-center items-start gap-12 font-custom1">
             <div className="text-xl flex flex-col gap-2 overflow-hidden">
               Get in Touch
-              <p className="font-custom1 text-2xl group">
+              <div className="font-custom1 text-2xl group">
                 info@example.com
                 <hr className="group-hover:-translate-x-[110%] transition-all duration-500" />
-              </p>
+              </div>
             </div>
             <div className="text-xl flex flex-col gap-2">
               Have a startup projecto ?
