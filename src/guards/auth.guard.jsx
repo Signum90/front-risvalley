@@ -9,7 +9,8 @@ const AuthGuard = () => {
 
   const location = useLocation()
   const { auth, type } = authStore()
-
+  
+  // Private routes
   for (let key in PrivateRoutes) {
 
     const value = PrivateRoutes[key]
@@ -19,12 +20,14 @@ const AuthGuard = () => {
 
       // si no esta autenticado
       if (!auth || type === 'user') return <Navigate replace to={PublicRoutes.HOME} />
-
+      
       // si esta autenticado
       return <LayoutDash />
+
     }
   }
 
+  // Public routes
   for (let key in PublicRoutes) {
 
     const value = PublicRoutes[key]
@@ -40,6 +43,8 @@ const AuthGuard = () => {
     }
   }
 
+  // Bad end routes
+  window.location.href="/"  
 
 }
 
