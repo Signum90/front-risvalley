@@ -54,7 +54,7 @@ export const NavBar = () => {
           {/* estructura en laptop - pc */}
           <div className="w-full hidden justify-between xl:flex">
             {/* logo */}
-            <div className="w-[140px] my-auto h-full flex items-center justify-center">
+            <div className="max-w-[120px] my-auto h-full flex items-center justify-center">
               <img src="https://risvalley.b-cdn.net/wp-content/uploads/2020/09/RISVALLY-LOGO-200-148.png" alt="logo risvalley" />
             </div>
             {/* navegacion */}
@@ -145,6 +145,7 @@ export const NavBar = () => {
             <div className={`${visContacDiv ? '' : 'hidden'} text-lg pl-12 text-gray-400`}>
               <Link className="hover:text-white transition-colors duration-300">Preguntas Frecuentes</Link>
             </div>
+            <Link to={PublicRoutes.LOGIN}>Iniciar Secion</Link>
           </div>
           <footer className="py-6 flex gap-4 border-t-[1px]">
             <FacebookIcon className="text-lg hover:text-quaternary cursor-pointer transition-colors duration-300" />
