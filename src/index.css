@@ -11,13 +11,13 @@
 @font-face {
   /* Roc Grotesk | Bold */
   font-family: 'rocgrotesk';
-  src: url('../public/fonts/font-rocgrotesk-bold.otf');
+  src: url('/fonts/font-rocgrotesk-bold.otf');
 }
 
 @font-face {
   /* Kumbh Sans |  ExtraLight 200 */
   font-family: 'kumbh';
-  src: url('../public/fonts/font-kumbhsans.ttf');
+  src: url('/fonts/font-kumbhsans.ttf');
 }
 .font-r {
   font-family: 'rocgrotesk';
