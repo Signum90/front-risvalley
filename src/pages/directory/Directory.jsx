@@ -3,7 +3,6 @@ const Directory = () => {
     <section id="home-stadistics" className="w-full flex justify-center px-4 my-[110px]">
       <div className="xl:max-w-[1100px] 2xl:max-w-[1300px] container items-center flex gap-8">
         <div className="flex-1 flex flex-col items-center gap-7">
-          {/* frase */}
           <h3 className="w-full text-3xl lg:text-5xl font-medium text-center">
             We develop games that exist forever
           </h3>
@@ -11,7 +10,7 @@ const Directory = () => {
             Qadipiscing elit, sed do eiusmod tempor incididunt ut labore eli sed do eiu.
           </p>
           <p>
-            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco mas texto.
           </p>
         </div>
         <div className="flex-1">
