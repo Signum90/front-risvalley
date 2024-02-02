@@ -16,14 +16,14 @@ function App () {
 
   // stadistics
   const stadisticData = [
-    { title: 'Projects', value: '98' },
-    { title: 'People', value: '65' },
-    { title: 'Universitys', value: '10' },
-    { title: 'Dreams', value: '15' }
+    { title: 'Projects', value: 98 },
+    { title: 'People', value: 65 },
+    { title: 'Universitys', value: 10 },
+    { title: 'Dreams', value: 15 }
   ]
 
   return (
-    <div className="h-full w-full">
+    <>
       {/*  hero image */}
       <section className="w-full h-screen flex flex-col justify-center items-center">
         <div className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
@@ -152,7 +152,7 @@ function App () {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
 
